@@ -31,7 +31,7 @@ function card(d) {
   <p class="price-line"><span class="price">${usd(d.price)}</span> <span class="was">${usd(d.was)}</span> <span class="off">${percentOff(d)}% off</span></p>
   <p class="verdict ${escape(d.verdict.label)}"><b>${escape(verdictWords[d.verdict.label] || d.verdict.label)}</b> — ${escape(d.verdict.note)}</p>
   <p class="checked-note">Checked ${when(d.checked)} &middot; ${escape(d.source)}</p>
-  <a class="go" href="${escape(d.url)}" rel="noopener">See it at ${escape(d.store)}</a>
+  <a class="go" href="${escape(d.url)}" target="_blank" rel="noopener">See it at ${escape(d.store)}</a>
 </li>`;
 }
 
@@ -130,7 +130,7 @@ export function dealPage(d) {
   <dt>Read in</dt><dd>${escape(d.source)}</dd>
 </dl>
 ${also}
-<p><a class="go" href="${escape(d.url)}" rel="noopener">See it at ${escape(d.store)}</a></p>
+<p><a class="go" href="${escape(d.url)}" target="_blank" rel="noopener">See it at ${escape(d.store)}</a></p>
 </div>`;
 }
 
